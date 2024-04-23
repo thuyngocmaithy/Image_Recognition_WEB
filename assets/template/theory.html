@@ -45,62 +45,7 @@
             </div>
         </section>
 
-        <section class="about">
-            <div class="info">
-                <h2>Feature là gì?</h2>
-                <p>
-                    - Đây là một yếu tố quan trọng trong mạng Neural Convolutional (CNN) đề cập đến các đặc điểm cụ thể
-                    hoặc
-                    mẫu trong dữ liệu hình ảnh. Các Feature có thể là những phần tử nhỏ, gần như được xem như những mảng
-                    hai
-                    chiều nhỏ được trích xuất từ hình ảnh. Chúng được sử dụng để biểu diễn các đặc trưng cục bộ như
-                    cạnh,
-                    góc, texture hoặc các mẫu cụ thể không gian trong hình ảnh.<br>
-                    - Trong quá trình triển khai, mạng CNN tự động học cách trích xuất các Feature từ dữ liệu hình ảnh.
-                    Các
-                    Feature này có thể được trích xuất thông qua tầng convolutional của mạng, trong đó các bộ lọc
-                    (filters)
-                    được áp dụng để tìm các Feature cụ thể trong từng phần của hình ảnh.<br>
-                    - Việc khớp Feature với các đặc trưng chung trong hình ảnh cho phép mạng CNN nhận biết các đối
-                    tượng,
-                    biểu hiện hoặc phân loại các hình ảnh dựa trên các đặc trưng cụ thể này. Điều này giúp cho mạng CNN
-                    trở
-                    nên mạnh mẽ hơn trong việc nhận dạng và phân loại hình ảnh dựa trên các đặc trưng cục bộ.<br>
 
-                    <img src="../img/14.png" class="img">
-                </p>
-            </div>
-        </section>
-
-        <section class="about">
-            <div class="info">
-                <h2>Convolution Layer</h2>
-                <p> Convolution (lớp tích chập) là lớp đầu tiên trích xuất các đặc tính từ hình ảnh. Tham số lớp này
-                    bao gồm một tập hợp các bộ lọc có thể học được. Các bộ lọc đều nhỏ thường có kích cỡ hai chiều
-                    đầu tiên khoảng 3x3 hoặc 5x5, .... và có độ sâu bằng với độ sâu của đầu vào đầu vào. Bằng cách
-                    trượt dần bộ lọc theo chiều ngang và dọc trên ảnh, chúng thu được một Feature Map chứa các đặc
-                    trưng được trích xuất từ trên hình ảnh đầu vào.<br>
-                    Quá trình trượt các bộ lọc thường có các giá trị được quy định bao gồm:<br>
-                    - padding: quy định bộ đệm của bộ lọc hay chính là phần màu xám được thêm vào ảnh.<br>
-                    - stride: quy định bước nhảy trong quá trình thực hiện.<br>
-                    <img src="../img/4.png" class="img">
-                </p>
-            </div>
-        </section>
-        <section class="about">
-            <div class="info">
-                <h2>Pooling layer</h2>
-                <p>
-                    Pooling layer thường được dùng giữa các convolutional layer, để giảm kích thước dữ liệu nhưng
-                    vẫn giữ được các thuộc tính quan trọng. Kích thước dữ liệu giảm giúp giảm việc tính toán trong
-                    model. Trong quá trình này, quy tắc về stride và padding áp dụng như phép tính convolution trên
-                    ảnh.<br>
-                    <img src="../img/5.png" class="img">
-                    Có 2 loại pooling layer phổ biến là: max pooling và average pooling.<br>
-                    <img src="../img/7.png" class="img">
-                </p>
-            </div>
-        </section>
         <section class="about">
             <div class="info">
                 <h2>Fully connected layer</h2>
@@ -111,16 +56,6 @@
                     tính năng lại với nhau để tạo ra một mô hình. Cuối cùng sử dụng softmax hoặc sigmoid để phân
                     loại đầu ra.<br>
                     <img src="../img/6.png" class="img">
-                </p>
-            </div>
-        </section>
-        <section class="about">
-            <div class="info">
-                <h2>Visualise convolutional neural network</h2>
-                <p>
-                    Mô hình convolutional neural network : Input image -> Convolutional layer (Conv) + Pooling layer
-                    (Pool) -> Fully connected layer (FC) -> Output.
-                    <img src="../img/8.png" class="img">
                 </p>
             </div>
         </section>

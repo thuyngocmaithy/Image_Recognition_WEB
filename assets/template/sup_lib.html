@@ -31,10 +31,6 @@
             <h3>Mô tả vấn đề CIFAR-10</h3>
             <div class="content-container">
                 <p>
-                    Vấn đề tự động phân loại ảnh của các đối tượng rất khó khăn vì số lượng hoán vị gần như vô hạn của các đối tượng, vị trí, ánh sáng, v.v. Đó là một vấn đề khó khăn.<br>
-
-                    Đây là một vấn đề được nghiên cứu kỹ lưỡng về thị giác máy tính và gần đây là một minh chứng quan trọng về khả năng học sâu. Một bộ dữ liệu thị giác máy tính và học sâu tiêu chuẩn cho vấn đề này đã được Viện Nghiên cứu Nâng cao Canada (CIFAR) phát triển .<br>
-
                     Bộ dữ liệu CIFAR-10 bao gồm 60.000 ảnh được chia thành 10 lớp (do đó có tên CIFAR-10). Các lớp bao gồm các đồ vật thông thường như máy bay, ô tô, chim, mèo, v.v. Tập dữ liệu được phân chia theo cách tiêu chuẩn, trong đó 50.000 hình ảnh được sử dụng để đào tạo mô hình và 10.000 hình ảnh còn lại để đánh giá hiệu suất của mô hình.<br>
 
                     Các bức ảnh có màu với các thành phần màu đỏ, xanh lá cây và xanh lam nhưng có kích thước nhỏ, hình vuông có kích thước 32 x 32 pixel.<br>
@@ -50,10 +46,6 @@
                 <p>
                     Bộ dữ liệu CIFAR-10 có thể dễ dàng được tải vào Keras.<br>
 
-                    Keras có cơ sở để tự động tải xuống các bộ dữ liệu tiêu chuẩn như CIFAR-10 và lưu trữ chúng trong thư mục ~/.keras/datasets bằng hàm cifar10.load_data(). Tập dữ liệu này có dung lượng lớn là 163 megabyte nên có thể mất vài phút để tải xuống.<br>
-                    
-                    Sau khi tải xuống, các lệnh gọi hàm tiếp theo sẽ tải tập dữ liệu sẵn sàng để sử dụng.<br>
-                    
                     Tập dữ liệu được lưu trữ dưới dạng tập huấn luyện và tập kiểm tra đã được chọn lọc, sẵn sàng để sử dụng trong Keras. Mỗi hình ảnh được biểu diễn dưới dạng ma trận ba chiều, với các kích thước là đỏ, lục, lam, chiều rộng và chiều cao.<br>
 
                     Việc chạy mã sẽ tạo ra một ô ảnh 3 × 3. Các hình ảnh đã được phóng to từ kích thước nhỏ 32×32 nhưng bạn có thể thấy rõ xe tải, ngựa và ô tô. Bạn cũng có thể thấy một số biến dạng ở một số hình ảnh bị ép ở tỷ lệ khung hình vuông.<br>
