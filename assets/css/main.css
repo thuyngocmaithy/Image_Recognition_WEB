@@ -376,7 +376,7 @@ h4 {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     #introduce {
         height: auto;
     }
