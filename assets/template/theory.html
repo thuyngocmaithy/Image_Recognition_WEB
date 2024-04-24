@@ -40,7 +40,7 @@
                     - Các lớp cơ bản trong một mạng CNN bao gồm : lớp tích chập (Convolutional), lớp lấy mẫu (Pooling)
                     và
                     lớp kết nối đầy đủ (Full-connected) :<br>
-                    <img src="../img/3.png" class="img">
+                    <img src="../img/gif.gif" class="img">
                 </p>
             </div>
         </section>
@@ -48,14 +48,33 @@
 
         <section class="about">
             <div class="info">
-                <h2>Fully connected layer</h2>
+                <h2>Cấu trúc mạng CNN</h2>
                 <p>
-                    Sau khi ảnh được truyền qua nhiều convolutional layer và pooling layer thì model đã học được
-                    tương đối các đặc điểm của ảnh thì tensor của output của layer cuối cùng sẽ được là phẳng thành
-                    vector và đưa vào một lớp được kết nối như một mạng nơ-ron. Với FC layer được kết hợp với các
-                    tính năng lại với nhau để tạo ra một mô hình. Cuối cùng sử dụng softmax hoặc sigmoid để phân
-                    loại đầu ra.<br>
-                    <img src="../img/6.png" class="img">
+                    Mạng CNN là một tập hợp các lớp Convolution chồng lên nhau và sử dụng các hàm nonlinear activation
+                    như ReLU và tanh để kích hoạt các trọng số trong các node. Mỗi một lớp sau khi thông qua các hàm
+                    kích hoạt sẽ tạo ra các thông tin trừu tượng hơn cho các lớp tiếp theo. <br>
+
+                    Mỗi một lớp sau khi thông qua các hàm kích hoạt sẽ tạo ra các thông tin trừu tượng hơn cho các lớp
+                    tiếp theo. Trong mô hình mạng truyền ngược (feedforward neural network) thì mỗi neural đầu vào
+                    (input node) cho mỗi neural đầu ra trong các lớp tiếp theo. <br>
+
+                    Mô hình này gọi là mạng kết nối đầy đủ (fully connected layer) hay mạng toàn vẹn (affine layer). Còn
+                    trong mô hình CNNs thì ngược lại. Các layer liên kết được với nhau thông qua cơ chế convolution.
+                    <br>
+
+                    Layer tiếp theo là kết quả convolution từ layer trước đó, nhờ vậy mà ta có được các kết nối cục bộ.
+                    Như vậy mỗi neuron ở lớp kế tiếp sinh ra từ kết quả của filter áp đặt lên một vùng ảnh cục bộ của
+                    neuron trước đó. <br>
+
+                    Mỗi một lớp được sử dụng các filter khác nhau thông thường có hàng trăm hàng nghìn filter như vậy và
+                    kết hợp kết quả của chúng lại. Ngoài ra có một số layer khác như pooling/subsampling layer dùng để
+                    chắt lọc lại các thông tin hữu ích hơn (loại bỏ các thông tin nhiễu). <br>
+
+                    Trong quá trình huấn luyện mạng (traning) CNN tự động học các giá trị qua các lớp filter dựa vào
+                    cách thức mà bạn thực hiện. Ví dụ trong tác vụ phân lớp ảnh, CNNs sẽ cố gắng tìm ra thông số tối ưu
+                    cho các filter tương ứng theo thứ tự raw pixel > edges > shapes > facial > high-level features.
+                    Layer cuối cùng được dùng để phân lớp ảnh.<br>
+                    <img src="../img/3.png" class="img">
                 </p>
             </div>
         </section>
@@ -112,38 +131,12 @@
             <div class="info">
                 <h2>Cách chọn tham số cho CNN</h2>
                 <p>
-                    - Khi chọn tham số cho mạng Neural Convolutional (CNN), người thực hiện nên xác định quy trình chung
-                    để
-                    điều chỉnh và tối ưu hóa hiệu suất của mô hình. Dưới đây là một số phương pháp thường được sử
-                    dụng:<br>
+                    1. Số các convolution layer: càng nhiều các convolution layer thì performance càng được cải thiện.
+                    Sau khoảng 3 hoặc 4 layer, các tác động được giảm một cách đáng kể.<br>
+                    2. Filter size: thường filter theo size 5x5 hoặc 3x3.<br>
+                    3. Pooling size: thường là 2x2 hoặc 4x4 cho ảnh đầu vào lớn.<br>
+                    4. Cách cuối cùng là thực hiện nhiều lần việc train test để chọn ra được param tốt nhất.<br>
                     <img src="../img/17.png" class="img">
-                    - Kiến trúc mô hình: Lựa chọn kiến trúc mô hình phù hợp với bài toán cụ thể, bao gồm số lớp
-                    convolutional,
-                    số lớp tổng hợp, số lượng neuron trong các lớp fully connected, kích thước và bước nhảy của bộ lọc
-                    và
-                    các kỹ thuật như dropout và batch normalization.<br>
-                    - Tốc độ học (learning rate): Điều chỉnh tốc độ học cực kỳ quan trọng để đảm bảo rằng mô hình hội tụ
-                    đúng
-                    cách mà không bị quá fitting hoặc underfitting.<br>
-                    - Thuật toán tối ưu hóa: Sử dụng các thuật toán tối ưu hóa như Adam, SGD, RMSprop để điều chỉnh việc
-                    cập
-                    nhật trọng số trong quá trình huấn luyện.<br>
-                    - Kích thước batch: Lựa chọn kích thước batch phù hợp, đảm bảo cân bằng giữa việc cập nhật trọng số
-                    và
-                    tài
-                    nguyên tính toán.<br>
-                    - Hàm kích hoạt: Sử dụng hàm kích hoạt phù hợp như ReLU, Sigmoid, Tanh, hoặc Leaky ReLU để tối ưu
-                    hóa
-                    việc
-                    lan truyền ngược và đảm bảo tính phi tuyến của mô hình.<br>
-                    - Khởi tạo trọng số: Lựa chọn phương pháp khởi tạo trọng số ban đầu như Xavier, He, Glorot để đảm
-                    bảo
-                    việc
-                    huấn luyện hiệu quả. <br>
-                    - Kiểm tra và đánh giá: Sử dụng các kỹ thuật kiểm tra và đánh giá như cross-validation, early
-                    stopping
-                    để
-                    đảm bảo mô hình không bị overfitting và có khả năng tổng quát hóa tốt trên dữ liệu kiểm tra.<br>
                 </p>
             </div>
         </section>

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-    
+
     </header>
     <main>
         <section class="about">
@@ -24,34 +24,42 @@
                     Một vấn đề khó khăn khi mạng lưới thần kinh truyền thống thất bại được gọi là nhận dạng đối tượng.
                     Đó là nơi người mẫu có thể xác định các đối tượng trong hình ảnh.
                 </p>
-                
+
             </div>
         </section>
         <section class="about">
             <h3>Mô tả vấn đề CIFAR-10</h3>
             <div class="content-container">
                 <p>
-                    Bộ dữ liệu CIFAR-10 bao gồm 60.000 ảnh được chia thành 10 lớp (do đó có tên CIFAR-10). Các lớp bao gồm các đồ vật thông thường như máy bay, ô tô, chim, mèo, v.v. Tập dữ liệu được phân chia theo cách tiêu chuẩn, trong đó 50.000 hình ảnh được sử dụng để đào tạo mô hình và 10.000 hình ảnh còn lại để đánh giá hiệu suất của mô hình.<br>
+                    Bộ dữ liệu CIFAR-10 bao gồm 60.000 ảnh được chia thành 10 lớp (do đó có tên CIFAR-10). Các lớp bao
+                    gồm các đồ vật thông thường như máy bay, ô tô, chim, mèo, v.v. Tập dữ liệu được phân chia theo cách
+                    tiêu chuẩn, trong đó 50.000 hình ảnh được sử dụng để đào tạo mô hình và 10.000 hình ảnh còn lại để
+                    đánh giá hiệu suất của mô hình.<br>
 
-                    Các bức ảnh có màu với các thành phần màu đỏ, xanh lá cây và xanh lam nhưng có kích thước nhỏ, hình vuông có kích thước 32 x 32 pixel.<br>
-                </p> 
-                <img src="../img/18.png" class="imagee">   
+                    Các bức ảnh có màu với các thành phần màu đỏ, xanh lá cây và xanh lam nhưng có kích thước nhỏ, hình
+                    vuông có kích thước 32 x 32 pixel.<br>
+                </p>
+                <img src="../img/18.png" class="imagee">
             </div>
         </section>
 
         <section class="about">
             <h3>Đang tải bộ dữ liệu CIFAR-10 trong Keras</h3>
             <div class="content-container">
-                <img src="../img/12.png" class="imagee"> 
+                <img src="../img/12.png" class="imagee">
                 <p>
                     Bộ dữ liệu CIFAR-10 có thể dễ dàng được tải vào Keras.<br>
 
-                    Tập dữ liệu được lưu trữ dưới dạng tập huấn luyện và tập kiểm tra đã được chọn lọc, sẵn sàng để sử dụng trong Keras. Mỗi hình ảnh được biểu diễn dưới dạng ma trận ba chiều, với các kích thước là đỏ, lục, lam, chiều rộng và chiều cao.<br>
+                    Tập dữ liệu được lưu trữ dưới dạng tập huấn luyện và tập kiểm tra đã được chọn lọc, sẵn sàng để sử
+                    dụng trong Keras. Mỗi hình ảnh được biểu diễn dưới dạng ma trận ba chiều, với các kích thước là đỏ,
+                    lục, lam, chiều rộng và chiều cao.<br>
 
-                    Việc chạy mã sẽ tạo ra một ô ảnh 3 × 3. Các hình ảnh đã được phóng to từ kích thước nhỏ 32×32 nhưng bạn có thể thấy rõ xe tải, ngựa và ô tô. Bạn cũng có thể thấy một số biến dạng ở một số hình ảnh bị ép ở tỷ lệ khung hình vuông.<br>
+                    Việc chạy mã sẽ tạo ra một ô ảnh 3 × 3. Các hình ảnh đã được phóng to từ kích thước nhỏ 32×32 nhưng
+                    bạn có thể thấy rõ xe tải, ngựa và ô tô. Bạn cũng có thể thấy một số biến dạng ở một số hình ảnh bị
+                    ép ở tỷ lệ khung hình vuông.<br>
 
-                </p>   
-                
+                </p>
+
             </div>
         </section>
 
@@ -59,37 +67,33 @@
             <h3>Mạng nơ-ron tích chập đơn giản cho CIFAR-10</h3>
             <div class="content-container">
                 <p>
-                   - Vấn đề CIFAR-10 được giải quyết tốt nhất bằng cách sử dụng mạng nơ ron tích chập (CNN).<br>
+                    - Kiến trúc mạng này được gọi là "sequential", tức là các lớp được xếp chồng lên nhau theo một trình
+                    tự cố định. Dưới đây là chi tiết về từng lớp:<br>
 
-                   - Bạn sẽ sử dụng cấu trúc có hai lớp tích chập, sau đó là tổng hợp tối đa và làm phẳng mạng thành các lớp được kết nối đầy đủ để đưa ra dự đoán.<br>
-                    
-                   - Cấu trúc mạng cơ sở có thể được tóm tắt như sau:<br>
-                    
-                    1. Lớp đầu vào tích chập, 32 bản đồ đặc trưng với kích thước 3×3, chức năng kích hoạt bộ chỉnh lưu và giới hạn trọng lượng của định mức tối đa được đặt thành 3<br>
+                    1. Conv2d (Conv2D): Lớp tích chập,  mỗi lớp tạo ra 32 bản đồ đặc trưng.<br>
 
-                    2. Tỷ lệ bỏ học được đặt thành 20%<br>
+                    2. Dropout (Dropout): Lớp giảm thiểu quá khớp bằng cách bỏ qua ngẫu nhiên một số nút.<br>
 
-                    3. Lớp tích chập, 32 bản đồ đặc trưng với kích thước 3 × 3, chức năng kích hoạt bộ chỉnh lưu và giới hạn trọng số của định mức tối đa được đặt thành 3<br>
+                    3. Conv2d_1 (Conv2D):  Lớp giảm kích thước bản đồ đặc trưng bằng cách lấy giá trị lớn nhất.<br>
 
-                    4.Lớp Pool tối đa có kích thước 2 × 2<br>
+                    4.Max_pooling2d (MaxPooling2D): Chuyển đổi đầu vào thành vector một chiều.<br>
 
-                    5. Làm phẳng lớp<br>
+                    5. Flatten (Flatten):  Lớp làm phẳng đầu vào để chuẩn bị cho các lớp kết nối đầy đủ.<br>
 
-                    6. Lớp được kết nối đầy đủ với 512 đơn vị và chức năng kích hoạt bộ chỉnh lưu<br>
+                    6. Dense (Dense): Là một lớp kết nối đầy đủ (fully connected layer) với 512 nút.<br>
 
-                    7. Tỷ lệ bỏ học được đặt thành 50%<br>
+                    7. Dropout_1 (Dropout): Một lớp Dropout khác để ngăn chặn quá khớp sau lớp dense.<br>
 
-                    8. Lớp đầu ra được kết nối đầy đủ với 10 đơn vị và chức năng kích hoạt softmax<br>
+                    8. Dense_1 (Dense): Một lớp kết nối đầy đủ khác với 10 nút, thường được sử dụng cho lớp đầu ra của
+                    một mô hình phân loại, với số lượng nút tương ứng với số lớp cần dự đoán.<br>
 
-                   - Cấu trúc mạng được tóm tắt để xác nhận rằng thiết kế đã được triển khai chính xác.<br>
-
-                </p>   
+                </p>
                 <img src="../img/13.png" class="imagee">
-                
+
             </div>
         </section>
     </main>
     <footer>
-       
+
     </footer>
 </body>

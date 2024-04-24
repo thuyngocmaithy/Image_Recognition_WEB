@@ -228,7 +228,7 @@ h4 {
 
 
 #about .wrapper .camera img {
-    width: 90%
+    width: 93%
 }
 
 #about .wrapper .blurb {
@@ -283,14 +283,15 @@ h4 {
     display: -ms-flexbox;
     display: flex;
     width: 1180px;
-    max-width: 93%;
+    max-width: 95%;
     height: 100%;
     margin: 0 auto;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
 }
+
 
 #featured .wrapper .blurb {
     width: 65%
@@ -326,7 +327,7 @@ h4 {
 }
 
 #featured .wrapper .featured img {
-    width: 90%
+    width: 100%
 }
 
 /* theory */
@@ -538,5 +539,27 @@ h4 {
         font-family: math;
         font-weight: bold;
         z-index: 1;
+    }
+    .about {
+        width: 92.2%;
+    }
+
+
+    .content-container {
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    
+    .content-container p {
+        line-height: 30px;
+        width: 100%; 
+        text-align: left; 
+    }
+    
+    .content-container .imagee {
+        margin: 15px;
+        border-radius: 10px;
+        width: 100%; 
+        text-align: right; 
     }
 }
