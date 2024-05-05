@@ -1,74 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Image_Recognition</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Jade website template">
-  <meta name="keywords" content="apollo, jade, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Finexo </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
 </head>
 
 <body>
-  <section id="introduce">
-    <div class="wrapper">
-      <div class="Content ">
-        <h1><strong>Phần mềm nhận dạng<br></strong> hình ảnh bằng AI</h1>
-        <p>
-          Nhận dạng hình ảnh bằng AI là một lĩnh vực nghiên cứu đầy thú vị và đang phát triển nhanh chóng trong ngành
-          công nghệ thông tin.
-          Sử dụng các thuật toán máy học và mạng nơ-ron sâu, nhận dạng hình ảnh AI cho phép máy tính không chỉ "nhìn"
-          thấy hình ảnh mà còn hiểu và phân tích nội dung của chúng.
-        </p>
-      </div>
-      <div class="introduce"><img src="assets/img/1.png" alt="introduce"></div>
-    </div>
-  </section>
 
-  <section id="about">
-    <div class="wrapper">
-      <div class="camera">
-        <div class="zoom-container">
-          <img src="assets/img/20.png" alt="Camera">
-          <a href="./assets/template/theory.html" class="learn-more-btn">Learn More</a>
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              ReT
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      ReT -
+                      Nhận dạng ảnh <br>
+                      bằng AI
+                    </h1>
+                    <p>
+                      Website nhận dạng ảnh bằng AI sử dụng mô hình CNN với sự hỗ trợ của thư viện Keras giúp nhận biết
+                      được các lớp ảnh "airplane", "automobile", "bird", "cat", "deer", "frog", "horse", "ship" và
+                      "truck"
+                    </p>
+                    <div class="btn-box">
+                      <a href="https://github.com/thuyngocmaithy/Image_Recognition_CNN" class="btn1">
+                        Visit
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+        </ol>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            <span>Information</span>
+          </h2>
+        </div>
+        <div class="row" style="display: ruby;">
+          <div class="col-md-5 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/cnn-logo.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Mô hình nhận dạng ảnh CNN
+                </h5>
+                <p>
+                  Convolutional Neutal Network (CNNs – Mạng nơ-ron tích chập) là một trong những mô
+                  hình Deep Learning tiên tiến giúp cho chúng ta xây dựng được những hệ thống thông minh
+                  với độ chính xác cao.
+                </p>
+                <a href="cau-truc-cnn.html">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/keras-logo.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Thư viện Keras
+                </h5>
+                <p>
+                  Keras là một thư viện mã nguồn mở được sử dụng rộng rãi trong lĩnh vực deep learning
+                  và mạng nơ-ron. Nó được thiết kế để giúp các nhà phát triển xây dựng và thử
+                  nghiệm các mô hình học sâu một cách dễ dàng và linh hoạt.
+                </p>
+                <a href="keras.html">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="blurb">
-        <h2>Cơ sở<strong> lý thuyết</strong></h2>
-        <p>
-          Trong kỷ nguyên số, công nghệ nhận dạng hình ảnh bằng AI đang mở ra những khả năng mới không giới hạn.
-          Tại đây, chúng ta sẽ khám phá những cơ sở lý thuyết cơ bản giúp máy tính không chỉ "thấy" mà còn "hiểu" những
-          gì chúng nhìn thấy.
-          Hãy cùng chúng em đi sâu vào lý thuyết và thực tiễn của công nghệ này để hiểu rõ hơn về cách thức và tiềm năng
-          ứng dụng
+  <!-- end service section -->
+  <!-- about section -->
 
-        </p>
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          Hướng dẫn cài đặt - <span>ReT</span>
+        </h2>
+      </div>
+      <div class="img-box w-50 m-auto">
+        <img src="images/ui-recognition.png" alt="">
+      </div>
+
+      <div class="detail-box">
+        <h3 class="mt-5">
+          Cài đặt website nhận dạng hình ảnh CNN
+        </h3>
+        <button id="setting-step-1" class="btn btn-light mb-2 mt-2">Bước 1: Tải xuống mã nguồn từ Github</button></br>
+        <!-- BEGIN BƯỚC 1 -->
+        <div id="container-setting-step-1" class="mb-5" style="display: none;">
+          <ul>
+            <li>Tải xuống mã nguồn của ReT từ Github. Bạn có thể truy cập vào
+              trang Github của dự án tại đây: https://github.com/thuyngocmaithy/Image_Recognition_CNN</li>
+            <li>Chọn Download ZIP</li>
+          </ul>
+          <div class="img-box w-75 m-auto">
+            <img src="images/download-zip.png" alt="">
+          </div>
+        </div>
+        <!-- END BƯỚC 1 -->
+        <button id="setting-step-2" class="btn btn-light mb-2">Bước 2: Cài đặt Python (Nếu chưa có
+          Python)</button></br>
+        <!-- BEGIN BƯỚC 2 -->
+        <div id="container-setting-step-2" class="mb-5" style="display: none;">
+          <h3>Windows:</h3>
+          <ul>
+            <li>Truy cập đường dẫn sau: https://www.python.org/downloads/</li>
+            <li>Tải file .exe và tiến hành cài đặt trên máy tính.</li>
+          </ul>
+          <h3>Linux:</h3>
+          <ul>
+            <li>Mở Terminal và nhập lệnh:</li>
+            <p class="font-italic">sudo apt install python3</p>
+            <li>Tiếp theo tiến hành cài đặt pip:</li>
+            <p class="font-italic">sudo apt install -y python3-pip</p>
+            <li>Nâng cấp pip và setuptools mới nhất:</li>
+            <p class="font-italic">pip3 install --upgrade pip</p>
+            <p class="font-italic">pip3 install --upgrade setuptool</p>
+          </ul>
+        </div>
+        <!-- END BƯỚC 2 -->
+        <button id="setting-step-3" class="btn btn-light mb-2">Bước 3: Cài đặt các thư viện cần thiết</button></br>
+        <!-- BEGIN BƯỚC 3 -->
+        <div id="container-setting-step-3" class="mb-5" style="display: none;">
+          <p>Bạn có thể cài đặt các thư viện cần thiết bằng cách sử dụng file requirements.txt đi kèm với mã nguồn của
+            ReT. Mở Command Prompt hoặc Terminal và điều hướng đến thư mục chứa mã nguồn của ứng
+            dụng, sau đó chạy lệnh sau để cài đặt các thư viện cần thiết:</p>
+          <li>Mở Terminal và nhập lệnh:</li>
+          <p class="font-italic">pip install -r requirements.txt</p>
+        </div>
+        <!-- END BƯỚC 3 -->
+        <button id="setting-step-4" class="btn btn-light mb-2">Bước 4: Chạy ứng dụng</button>
+        <!-- BEGIN BƯỚC 4 -->
+        <div id="container-setting-step-4" class="mb-5" style="display: none;">
+          <p>Sau khi cài đặt Python và các thư viện cần thiết, bạn có thể chạy website nhận dạng hình ảnh CNN - ReT. Mở
+            Command
+            Prompt hoặc Terminal và điều hướng đến thư mục chứa mã nguồn của ứng dụng.</p>
+          <p>Chạy lệnh sau để khởi chạy ứng dụng:</p>
+          <li class="font-italic">python main.py</li>
+          <p>Hoặc</p>
+          <li class="font-italic">python3 main.py</li>
+        </div>
+        <!-- END BƯỚC 4 -->
       </div>
 
     </div>
   </section>
 
-  <section id="featured">
-    <div class="wrapper">
-      <div class="blurb">
-        <h2><strong>Thư viện</strong><br> và phần mềm hỗ trợ</h2>
-        <p>Python với sự đơn giản và mạnh mẽ, kết hợp với thư viện Keras, trở thành sự lựa chọn hàng đầu trong việc phát triển AI. 
-          Keras là một thư viện mạnh mẽ cho học sâu, cung cấp các công cụ trực quan và dễ tiếp cận, giúp nhanh chóng triển khai mạng nơ-ron với ít mã nguồn.
-        </p>
+  <!-- end about section -->
+
+  <!-- team section -->
+  <section class="team_section layout_padding" style="background-color: whitesmoke;">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="">
+          <span>Our Team</span>
+        </h2>
       </div>
-      <div class="featured">
-        <div class="zoom-container">
-          <a href="./assets/template/sup_lib.html" class="learn-more-btn">Learn More</a>
-          <img src="assets/img/image.png" alt="Featured"></div>
+
+      <div class="team_container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/tnmt.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Mai Thy
+                </h5>
+                <p>
+                  Leader
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/pthhuy.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Phương Thùy
+                </h5>
+                <p>
+                  Member
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <!-- end team section -->
 
 
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
 
 </body>
 
